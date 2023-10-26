@@ -8,8 +8,8 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Adam/Documents/PlatformIO/Projects/231026-130839-kendryte-standalone-sdk_hello/include",
-                "C:/Users/Adam/Documents/PlatformIO/Projects/231026-130839-kendryte-standalone-sdk_hello/src",
+                "C:/Users/Adam/Desktop/riscVaudioDenoising/Hardware/include",
+                "C:/Users/Adam/Desktop/riscVaudioDenoising/Hardware/src",
                 "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/bsp",
                 "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/bsp/include",
                 "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/drivers",
@@ -28,8 +28,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Adam/Documents/PlatformIO/Projects/231026-130839-kendryte-standalone-sdk_hello/include",
-                    "C:/Users/Adam/Documents/PlatformIO/Projects/231026-130839-kendryte-standalone-sdk_hello/src",
+                    "C:/Users/Adam/Desktop/riscVaudioDenoising/Hardware/include",
+                    "C:/Users/Adam/Desktop/riscVaudioDenoising/Hardware/src",
                     "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/bsp",
                     "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/bsp/include",
                     "C:/Users/Adam/.platformio/packages/framework-kendryte-standalone-sdk/lib/drivers",
@@ -48,7 +48,6 @@
             },
             "defines": [
                 "PLATFORMIO=60111",
-                "BOARD_SIPEED_MAIX_GO",
                 "CONFIG_LOG_ENABLE",
                 "CONFIG_LOG_LEVEL=LOG_INFO",
                 "DEBUG=1",
