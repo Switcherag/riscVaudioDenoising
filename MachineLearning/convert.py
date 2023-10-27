@@ -7,7 +7,7 @@ def read_model_file(model_file):
     return model_content
 
 
-model='C:/Users/Adam/Desktop/riscVaudioDenoising/DeepLearning/your_model.tflite'
+model='C:/Users/Adam/Desktop/riscVaudioDenoising/MachineLearning/your_model.tflite'
 
 
 # compile_options
