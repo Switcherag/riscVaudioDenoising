@@ -8,16 +8,16 @@ def read_model_file(model_file):
 
 
 model='C:/Users/Adam/Desktop/riscVaudioDenoising/DeepLearning/your_model.tflite'
-target = 'k510'
+
 
 # compile_options
 compile_options = nncase.CompileOptions()
-compile_options.target = target
+compile_options.target = "k210"
 compile_options.dump_ir = True
 compile_options.dump_asm = True
 compile_options.dump_dir = 'tmp'  
 compile_options.input_type = 'float32'  # or 'uint8' 'int8'
-compile_options.input_shape = [None, 128, 128, 1]  # keep layout same as input layout
+compile_options.input_shape = [128, 128, 1]  # keep layout same as input layout
 
 
 
