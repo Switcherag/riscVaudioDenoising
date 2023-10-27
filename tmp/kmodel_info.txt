@@ -1,7 +1,0 @@
-
-MEMORY USAGES
-input:   64.00 KB	(65536 B)
-output:   64.00 KB	(65536 B)
-data:    6.00 MB	(6291456 B)
-MODEL:    7.41 MB	(7774200 B)
-TOTAL:   13.54 MB	(14196728 B)
