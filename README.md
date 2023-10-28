@@ -1,5 +1,7 @@
 # riscVaudioDenoising
 
-1) choosing a nn to work with [X]
+I) choosing a nn to work with [Passed] (detailled in MachineLearning)
 
-2) Implementing it on hw [Started]
+II) Implementing it on hw [Started] (detailled in Implementation)
+
+III) Test [None]

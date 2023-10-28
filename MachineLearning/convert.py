@@ -7,7 +7,7 @@ def read_model_file(model_file):
     return model_content
 
 
-model='C:/Users/Adam/Desktop/riscVaudioDenoising/MachineLearning/your_model.tflite'
+model='./MachineLearning/your_model.tflite'
 
 
 # compile_options
@@ -15,7 +15,7 @@ compile_options = nncase.CompileOptions()
 compile_options.target = "k210"
 compile_options.dump_ir = True
 compile_options.dump_asm = True
-compile_options.dump_dir = 'tmp'  
+compile_options.dump_dir = './MachineLearning/tmp'  
 compile_options.input_type = 'float32'  # or 'uint8' 'int8'
 compile_options.input_shape = [128, 128, 1]  # keep layout same as input layout
 
@@ -36,6 +36,6 @@ compiler.compile()
 
 # kmodel
 kmodel = compiler.gencode_tobytes()
-with open('test.kmodel', 'wb') as f:
+with open('./MachineLearning/test.kmodel', 'wb') as f:
     f.write(kmodel)
 
