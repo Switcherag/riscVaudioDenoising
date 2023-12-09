@@ -1,0 +1,1 @@
+mltk view ../your_model.tflite

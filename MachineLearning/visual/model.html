@@ -1,0 +1,1653 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>../your_model.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[77, 76, 73, 82, 32, 67, 111, 110, 118, 101, 114, 116, 101, 100, 46]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 serving_default_input_1:0 FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>95 StatefulPartitionedCall:0 FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br></span>[95]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>serving_default_input_1:0</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 1]</td>
+<td>[-1, 128, 128, 1]</td>
+<td>1</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>1</td><td>model/conv2d_19/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[16]</td>
+<td>None</td>
+<td>2</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>2</td><td>model/conv2d_16/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[32]</td>
+<td>None</td>
+<td>3</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>3</td><td>model/conv2d_13/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[64]</td>
+<td>None</td>
+<td>4</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>4</td><td>model/conv2d_10/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[128]</td>
+<td>None</td>
+<td>5</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>5</td><td>model/conv2d_8/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[256]</td>
+<td>None</td>
+<td>6</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>6</td><td>model/conv2d_22/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>7</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>7</td><td>model/conv2d_23/BiasAdd/ReadVariableOp</td>
+<td>FLOAT32</td>
+<td>[1]</td>
+<td>None</td>
+<td>8</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>8</td><td>model/conv2d/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 1]</td>
+<td>None</td>
+<td>9</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>9</td><td>model/conv2d_1/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 16]</td>
+<td>None</td>
+<td>10</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>10</td><td>model/conv2d_2/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 16]</td>
+<td>None</td>
+<td>11</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>11</td><td>model/conv2d_3/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 32]</td>
+<td>None</td>
+<td>12</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>12</td><td>model/conv2d_4/Conv2D</td>
+<td>FLOAT32</td>
+<td>[64, 3, 3, 32]</td>
+<td>None</td>
+<td>13</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>13</td><td>model/conv2d_5/Conv2D</td>
+<td>FLOAT32</td>
+<td>[64, 3, 3, 64]</td>
+<td>None</td>
+<td>14</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>14</td><td>model/conv2d_6/Conv2D</td>
+<td>FLOAT32</td>
+<td>[128, 3, 3, 64]</td>
+<td>None</td>
+<td>15</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>15</td><td>model/conv2d_7/Conv2D</td>
+<td>FLOAT32</td>
+<td>[128, 3, 3, 128]</td>
+<td>None</td>
+<td>16</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>16</td><td>model/conv2d_8/Conv2D</td>
+<td>FLOAT32</td>
+<td>[256, 3, 3, 128]</td>
+<td>None</td>
+<td>17</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>17</td><td>model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[256, 3, 3, 256]</td>
+<td>None</td>
+<td>18</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>18</td><td>model/conv2d_10/Conv2D</td>
+<td>FLOAT32</td>
+<td>[128, 2, 2, 256]</td>
+<td>None</td>
+<td>19</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>19</td><td>model/conv2d_11/Conv2D</td>
+<td>FLOAT32</td>
+<td>[128, 3, 3, 256]</td>
+<td>None</td>
+<td>20</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>20</td><td>model/conv2d_12/Conv2D</td>
+<td>FLOAT32</td>
+<td>[128, 3, 3, 128]</td>
+<td>None</td>
+<td>21</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>21</td><td>model/conv2d_13/Conv2D</td>
+<td>FLOAT32</td>
+<td>[64, 2, 2, 128]</td>
+<td>None</td>
+<td>22</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>22</td><td>model/conv2d_14/Conv2D</td>
+<td>FLOAT32</td>
+<td>[64, 3, 3, 128]</td>
+<td>None</td>
+<td>23</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>23</td><td>model/conv2d_15/Conv2D</td>
+<td>FLOAT32</td>
+<td>[64, 3, 3, 64]</td>
+<td>None</td>
+<td>24</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>24</td><td>model/conv2d_16/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 2, 2, 64]</td>
+<td>None</td>
+<td>25</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>25</td><td>model/conv2d_17/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 64]</td>
+<td>None</td>
+<td>26</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>26</td><td>model/conv2d_18/Conv2D</td>
+<td>FLOAT32</td>
+<td>[32, 3, 3, 32]</td>
+<td>None</td>
+<td>27</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>27</td><td>model/conv2d_19/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 2, 2, 32]</td>
+<td>None</td>
+<td>28</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>28</td><td>model/conv2d_20/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 32]</td>
+<td>None</td>
+<td>29</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>29</td><td>model/conv2d_21/Conv2D</td>
+<td>FLOAT32</td>
+<td>[16, 3, 3, 16]</td>
+<td>None</td>
+<td>30</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>30</td><td>model/conv2d_22/Conv2D</td>
+<td>FLOAT32</td>
+<td>[2, 3, 3, 16]</td>
+<td>None</td>
+<td>31</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>31</td><td>model/conv2d_23/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 1, 1, 2]</td>
+<td>None</td>
+<td>32</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>32</td><td>model/up_sampling2d_3/mul</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>33</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>33</td><td>model/up_sampling2d_2/mul</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>34</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>34</td><td>model/up_sampling2d_1/mul</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>35</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>35</td><td>model/up_sampling2d/mul</td>
+<td>INT32</td>
+<td>[2]</td>
+<td>None</td>
+<td>36</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>36</td><td>model/conv2d/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>37</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>37</td><td>model/leaky_re_lu/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>38</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>38</td><td>model/conv2d_1/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_1/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>39</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>39</td><td>model/leaky_re_lu_1/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>40</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>40</td><td>model/max_pooling2d/MaxPool</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 16]</td>
+<td>[-1, 64, 64, 16]</td>
+<td>41</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>41</td><td>model/conv2d_2/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_2/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>42</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>42</td><td>model/leaky_re_lu_2/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>43</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>43</td><td>model/conv2d_3/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_3/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>44</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>44</td><td>model/leaky_re_lu_3/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>45</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>45</td><td>model/max_pooling2d_1/MaxPool</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 32]</td>
+<td>[-1, 32, 32, 32]</td>
+<td>46</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>46</td><td>model/conv2d_4/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_4/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>47</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>47</td><td>model/leaky_re_lu_4/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>48</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>48</td><td>model/conv2d_5/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_5/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>49</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>49</td><td>model/leaky_re_lu_5/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>50</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>50</td><td>model/max_pooling2d_2/MaxPool</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 64]</td>
+<td>[-1, 16, 16, 64]</td>
+<td>51</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>51</td><td>model/conv2d_6/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_6/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>52</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>52</td><td>model/leaky_re_lu_6/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>53</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>53</td><td>model/conv2d_7/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_7/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>54</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>54</td><td>model/leaky_re_lu_7/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>55</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>55</td><td>model/max_pooling2d_3/MaxPool</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 128]</td>
+<td>[-1, 8, 8, 128]</td>
+<td>56</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>56</td><td>model/conv2d_8/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_8/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>[-1, 8, 8, 256]</td>
+<td>57</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>57</td><td>model/leaky_re_lu_8/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>[-1, 8, 8, 256]</td>
+<td>58</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>58</td><td>model/conv2d_9/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_9/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>[-1, 8, 8, 256]</td>
+<td>59</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>59</td><td>model/leaky_re_lu_9/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 8, 8, 256]</td>
+<td>[-1, 8, 8, 256]</td>
+<td>60</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>60</td><td>model/up_sampling2d/resize/ResizeNearestNeighbor</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 256]</td>
+<td>[-1, 16, 16, 256]</td>
+<td>61</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>61</td><td>model/conv2d_10/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_10/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>62</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>62</td><td>model/leaky_re_lu_10/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>63</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>63</td><td>model/concatenate/concat</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 256]</td>
+<td>[-1, 16, 16, 256]</td>
+<td>64</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>64</td><td>model/conv2d_11/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_11/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>65</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>65</td><td>model/leaky_re_lu_11/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>66</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>66</td><td>model/conv2d_12/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_12/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>67</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>67</td><td>model/leaky_re_lu_12/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 16, 16, 128]</td>
+<td>[-1, 16, 16, 128]</td>
+<td>68</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>68</td><td>model/up_sampling2d_1/resize/ResizeNearestNeighbor</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 128]</td>
+<td>[-1, 32, 32, 128]</td>
+<td>69</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>69</td><td>model/conv2d_13/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_13/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>70</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>70</td><td>model/leaky_re_lu_13/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>71</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>71</td><td>model/concatenate_1/concat</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 128]</td>
+<td>[-1, 32, 32, 128]</td>
+<td>72</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>72</td><td>model/conv2d_14/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_14/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>73</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>73</td><td>model/leaky_re_lu_14/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>74</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>74</td><td>model/conv2d_15/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_15/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>75</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>75</td><td>model/leaky_re_lu_15/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 32, 32, 64]</td>
+<td>[-1, 32, 32, 64]</td>
+<td>76</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>76</td><td>model/up_sampling2d_2/resize/ResizeNearestNeighbor</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 64]</td>
+<td>[-1, 64, 64, 64]</td>
+<td>77</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>77</td><td>model/conv2d_16/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_16/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>78</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>78</td><td>model/leaky_re_lu_16/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>79</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>79</td><td>model/concatenate_2/concat</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 64]</td>
+<td>[-1, 64, 64, 64]</td>
+<td>80</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>80</td><td>model/conv2d_17/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_17/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>81</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>81</td><td>model/leaky_re_lu_17/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>82</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>82</td><td>model/conv2d_18/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_18/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>83</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>83</td><td>model/leaky_re_lu_18/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 64, 64, 32]</td>
+<td>[-1, 64, 64, 32]</td>
+<td>84</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>84</td><td>model/up_sampling2d_3/resize/ResizeNearestNeighbor</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 32]</td>
+<td>[-1, 128, 128, 32]</td>
+<td>85</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>85</td><td>model/conv2d_19/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_19/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>86</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>86</td><td>model/leaky_re_lu_19/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>87</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>87</td><td>model/concatenate_3/concat</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 32]</td>
+<td>[-1, 128, 128, 32]</td>
+<td>88</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>88</td><td>model/conv2d_20/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_20/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>89</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>89</td><td>model/leaky_re_lu_20/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>90</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>90</td><td>model/conv2d_21/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_21/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>91</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>91</td><td>model/leaky_re_lu_21/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 16]</td>
+<td>[-1, 128, 128, 16]</td>
+<td>92</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>92</td><td>model/conv2d_22/BiasAdd;model/conv2d_22/BiasAdd/ReadVariableOp;model/conv2d_22/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 2]</td>
+<td>[-1, 128, 128, 2]</td>
+<td>93</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>93</td><td>model/leaky_re_lu_22/LeakyRelu</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 2]</td>
+<td>[-1, 128, 128, 2]</td>
+<td>94</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>94</td><td>model/conv2d_23/BiasAdd;model/conv2d_23/BiasAdd/ReadVariableOp;model/conv2d_23/Conv2D</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 1]</td>
+<td>[-1, 128, 128, 1]</td>
+<td>95</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>95</td><td>StatefulPartitionedCall:0</td>
+<td>FLOAT32</td>
+<td>[1, 128, 128, 1]</td>
+<td>[-1, 128, 128, 1]</td>
+<td>96</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 serving_default_input_1:0 FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br>8 model/conv2d/Conv2D FLOAT32 [16, 3, 3, 1]None<br>1 model/conv2d_19/BiasAdd/ReadVariableOp FLOAT32 [16]None<br></span>[0, 8, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>36 model/conv2d/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[36]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>36 model/conv2d/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[36]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>37 model/leaky_re_lu/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[37]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>37 model/leaky_re_lu/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br>9 model/conv2d_1/Conv2D FLOAT32 [16, 3, 3, 16]None<br>1 model/conv2d_19/BiasAdd/ReadVariableOp FLOAT32 [16]None<br></span>[37, 9, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>38 model/conv2d_1/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_1/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[38]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>38 model/conv2d_1/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_1/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[38]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>39 model/leaky_re_lu_1/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[39]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>39 model/leaky_re_lu_1/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[39]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>40 model/max_pooling2d/MaxPool FLOAT32 [1, 64, 64, 16][-1, 64, 64, 16]<br></span>[40]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (2)</td>
+</tr>
+<tr>
+<td>5</td><td><span class='tooltip'><span class='tooltipcontent'>40 model/max_pooling2d/MaxPool FLOAT32 [1, 64, 64, 16][-1, 64, 64, 16]<br>10 model/conv2d_2/Conv2D FLOAT32 [32, 3, 3, 16]None<br>2 model/conv2d_16/BiasAdd/ReadVariableOp FLOAT32 [32]None<br></span>[40, 10, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>41 model/conv2d_2/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_2/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[41]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>6</td><td><span class='tooltip'><span class='tooltipcontent'>41 model/conv2d_2/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_2/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[41]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>42 model/leaky_re_lu_2/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[42]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>7</td><td><span class='tooltip'><span class='tooltipcontent'>42 model/leaky_re_lu_2/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br>11 model/conv2d_3/Conv2D FLOAT32 [32, 3, 3, 32]None<br>2 model/conv2d_16/BiasAdd/ReadVariableOp FLOAT32 [32]None<br></span>[42, 11, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>43 model/conv2d_3/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_3/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[43]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>8</td><td><span class='tooltip'><span class='tooltipcontent'>43 model/conv2d_3/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_3/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[43]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>44 model/leaky_re_lu_3/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[44]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>9</td><td><span class='tooltip'><span class='tooltipcontent'>44 model/leaky_re_lu_3/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[44]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>45 model/max_pooling2d_1/MaxPool FLOAT32 [1, 32, 32, 32][-1, 32, 32, 32]<br></span>[45]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (2)</td>
+</tr>
+<tr>
+<td>10</td><td><span class='tooltip'><span class='tooltipcontent'>45 model/max_pooling2d_1/MaxPool FLOAT32 [1, 32, 32, 32][-1, 32, 32, 32]<br>12 model/conv2d_4/Conv2D FLOAT32 [64, 3, 3, 32]None<br>3 model/conv2d_13/BiasAdd/ReadVariableOp FLOAT32 [64]None<br></span>[45, 12, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>46 model/conv2d_4/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_4/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[46]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>11</td><td><span class='tooltip'><span class='tooltipcontent'>46 model/conv2d_4/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_4/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[46]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>47 model/leaky_re_lu_4/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[47]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>12</td><td><span class='tooltip'><span class='tooltipcontent'>47 model/leaky_re_lu_4/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br>13 model/conv2d_5/Conv2D FLOAT32 [64, 3, 3, 64]None<br>3 model/conv2d_13/BiasAdd/ReadVariableOp FLOAT32 [64]None<br></span>[47, 13, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>48 model/conv2d_5/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_5/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[48]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>13</td><td><span class='tooltip'><span class='tooltipcontent'>48 model/conv2d_5/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_5/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[48]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>49 model/leaky_re_lu_5/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[49]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>14</td><td><span class='tooltip'><span class='tooltipcontent'>49 model/leaky_re_lu_5/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[49]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>50 model/max_pooling2d_2/MaxPool FLOAT32 [1, 16, 16, 64][-1, 16, 16, 64]<br></span>[50]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (2)</td>
+</tr>
+<tr>
+<td>15</td><td><span class='tooltip'><span class='tooltipcontent'>50 model/max_pooling2d_2/MaxPool FLOAT32 [1, 16, 16, 64][-1, 16, 16, 64]<br>14 model/conv2d_6/Conv2D FLOAT32 [128, 3, 3, 64]None<br>4 model/conv2d_10/BiasAdd/ReadVariableOp FLOAT32 [128]None<br></span>[50, 14, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>51 model/conv2d_6/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_6/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[51]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>16</td><td><span class='tooltip'><span class='tooltipcontent'>51 model/conv2d_6/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_6/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[51]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>52 model/leaky_re_lu_6/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[52]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>17</td><td><span class='tooltip'><span class='tooltipcontent'>52 model/leaky_re_lu_6/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br>15 model/conv2d_7/Conv2D FLOAT32 [128, 3, 3, 128]None<br>4 model/conv2d_10/BiasAdd/ReadVariableOp FLOAT32 [128]None<br></span>[52, 15, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>53 model/conv2d_7/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_7/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[53]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>18</td><td><span class='tooltip'><span class='tooltipcontent'>53 model/conv2d_7/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_7/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[53]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>54 model/leaky_re_lu_7/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[54]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>19</td><td><span class='tooltip'><span class='tooltipcontent'>54 model/leaky_re_lu_7/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[54]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>55 model/max_pooling2d_3/MaxPool FLOAT32 [1, 8, 8, 128][-1, 8, 8, 128]<br></span>[55]</span></td>
+<td>{'filter_height': 2, 'filter_width': 2, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 2, 'stride_w': 2}</td>
+<td>MAX_POOL_2D (2)</td>
+</tr>
+<tr>
+<td>20</td><td><span class='tooltip'><span class='tooltipcontent'>55 model/max_pooling2d_3/MaxPool FLOAT32 [1, 8, 8, 128][-1, 8, 8, 128]<br>16 model/conv2d_8/Conv2D FLOAT32 [256, 3, 3, 128]None<br>5 model/conv2d_8/BiasAdd/ReadVariableOp FLOAT32 [256]None<br></span>[55, 16, 5]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>56 model/conv2d_8/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_8/Conv2D FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[56]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>21</td><td><span class='tooltip'><span class='tooltipcontent'>56 model/conv2d_8/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_8/Conv2D FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[56]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>57 model/leaky_re_lu_8/LeakyRelu FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[57]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>22</td><td><span class='tooltip'><span class='tooltipcontent'>57 model/leaky_re_lu_8/LeakyRelu FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br>17 model/conv2d_9/Conv2D FLOAT32 [256, 3, 3, 256]None<br>5 model/conv2d_8/BiasAdd/ReadVariableOp FLOAT32 [256]None<br></span>[57, 17, 5]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>58 model/conv2d_9/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_9/Conv2D FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[58]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>23</td><td><span class='tooltip'><span class='tooltipcontent'>58 model/conv2d_9/BiasAdd;model/conv2d_8/BiasAdd/ReadVariableOp;model/conv2d_9/Conv2D FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[58]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>59 model/leaky_re_lu_9/LeakyRelu FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br></span>[59]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>24</td><td><span class='tooltip'><span class='tooltipcontent'>59 model/leaky_re_lu_9/LeakyRelu FLOAT32 [1, 8, 8, 256][-1, 8, 8, 256]<br>35 model/up_sampling2d/mul INT32 [2]None<br></span>[59, 35]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>60 model/up_sampling2d/resize/ResizeNearestNeighbor FLOAT32 [1, 16, 16, 256][-1, 16, 16, 256]<br></span>[60]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_NEAREST_NEIGHBOR (3)</td>
+</tr>
+<tr>
+<td>25</td><td><span class='tooltip'><span class='tooltipcontent'>60 model/up_sampling2d/resize/ResizeNearestNeighbor FLOAT32 [1, 16, 16, 256][-1, 16, 16, 256]<br>18 model/conv2d_10/Conv2D FLOAT32 [128, 2, 2, 256]None<br>4 model/conv2d_10/BiasAdd/ReadVariableOp FLOAT32 [128]None<br></span>[60, 18, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>61 model/conv2d_10/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_10/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[61]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>26</td><td><span class='tooltip'><span class='tooltipcontent'>61 model/conv2d_10/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_10/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[61]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>62 model/leaky_re_lu_10/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[62]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>27</td><td><span class='tooltip'><span class='tooltipcontent'>54 model/leaky_re_lu_7/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br>62 model/leaky_re_lu_10/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[54, 62]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>63 model/concatenate/concat FLOAT32 [1, 16, 16, 256][-1, 16, 16, 256]<br></span>[63]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (4)</td>
+</tr>
+<tr>
+<td>28</td><td><span class='tooltip'><span class='tooltipcontent'>63 model/concatenate/concat FLOAT32 [1, 16, 16, 256][-1, 16, 16, 256]<br>19 model/conv2d_11/Conv2D FLOAT32 [128, 3, 3, 256]None<br>4 model/conv2d_10/BiasAdd/ReadVariableOp FLOAT32 [128]None<br></span>[63, 19, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>64 model/conv2d_11/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_11/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[64]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>29</td><td><span class='tooltip'><span class='tooltipcontent'>64 model/conv2d_11/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_11/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[64]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>65 model/leaky_re_lu_11/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[65]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>30</td><td><span class='tooltip'><span class='tooltipcontent'>65 model/leaky_re_lu_11/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br>20 model/conv2d_12/Conv2D FLOAT32 [128, 3, 3, 128]None<br>4 model/conv2d_10/BiasAdd/ReadVariableOp FLOAT32 [128]None<br></span>[65, 20, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>66 model/conv2d_12/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_12/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[66]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>31</td><td><span class='tooltip'><span class='tooltipcontent'>66 model/conv2d_12/BiasAdd;model/conv2d_10/BiasAdd/ReadVariableOp;model/conv2d_12/Conv2D FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[66]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>67 model/leaky_re_lu_12/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br></span>[67]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>32</td><td><span class='tooltip'><span class='tooltipcontent'>67 model/leaky_re_lu_12/LeakyRelu FLOAT32 [1, 16, 16, 128][-1, 16, 16, 128]<br>34 model/up_sampling2d_1/mul INT32 [2]None<br></span>[67, 34]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>68 model/up_sampling2d_1/resize/ResizeNearestNeighbor FLOAT32 [1, 32, 32, 128][-1, 32, 32, 128]<br></span>[68]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_NEAREST_NEIGHBOR (3)</td>
+</tr>
+<tr>
+<td>33</td><td><span class='tooltip'><span class='tooltipcontent'>68 model/up_sampling2d_1/resize/ResizeNearestNeighbor FLOAT32 [1, 32, 32, 128][-1, 32, 32, 128]<br>21 model/conv2d_13/Conv2D FLOAT32 [64, 2, 2, 128]None<br>3 model/conv2d_13/BiasAdd/ReadVariableOp FLOAT32 [64]None<br></span>[68, 21, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>69 model/conv2d_13/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_13/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[69]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>34</td><td><span class='tooltip'><span class='tooltipcontent'>69 model/conv2d_13/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_13/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[69]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>70 model/leaky_re_lu_13/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[70]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>35</td><td><span class='tooltip'><span class='tooltipcontent'>49 model/leaky_re_lu_5/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br>70 model/leaky_re_lu_13/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[49, 70]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>71 model/concatenate_1/concat FLOAT32 [1, 32, 32, 128][-1, 32, 32, 128]<br></span>[71]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (4)</td>
+</tr>
+<tr>
+<td>36</td><td><span class='tooltip'><span class='tooltipcontent'>71 model/concatenate_1/concat FLOAT32 [1, 32, 32, 128][-1, 32, 32, 128]<br>22 model/conv2d_14/Conv2D FLOAT32 [64, 3, 3, 128]None<br>3 model/conv2d_13/BiasAdd/ReadVariableOp FLOAT32 [64]None<br></span>[71, 22, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>72 model/conv2d_14/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_14/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[72]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>37</td><td><span class='tooltip'><span class='tooltipcontent'>72 model/conv2d_14/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_14/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[72]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>73 model/leaky_re_lu_14/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[73]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>38</td><td><span class='tooltip'><span class='tooltipcontent'>73 model/leaky_re_lu_14/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br>23 model/conv2d_15/Conv2D FLOAT32 [64, 3, 3, 64]None<br>3 model/conv2d_13/BiasAdd/ReadVariableOp FLOAT32 [64]None<br></span>[73, 23, 3]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>74 model/conv2d_15/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_15/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[74]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>39</td><td><span class='tooltip'><span class='tooltipcontent'>74 model/conv2d_15/BiasAdd;model/conv2d_13/BiasAdd/ReadVariableOp;model/conv2d_15/Conv2D FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[74]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>75 model/leaky_re_lu_15/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br></span>[75]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>40</td><td><span class='tooltip'><span class='tooltipcontent'>75 model/leaky_re_lu_15/LeakyRelu FLOAT32 [1, 32, 32, 64][-1, 32, 32, 64]<br>33 model/up_sampling2d_2/mul INT32 [2]None<br></span>[75, 33]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>76 model/up_sampling2d_2/resize/ResizeNearestNeighbor FLOAT32 [1, 64, 64, 64][-1, 64, 64, 64]<br></span>[76]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_NEAREST_NEIGHBOR (3)</td>
+</tr>
+<tr>
+<td>41</td><td><span class='tooltip'><span class='tooltipcontent'>76 model/up_sampling2d_2/resize/ResizeNearestNeighbor FLOAT32 [1, 64, 64, 64][-1, 64, 64, 64]<br>24 model/conv2d_16/Conv2D FLOAT32 [32, 2, 2, 64]None<br>2 model/conv2d_16/BiasAdd/ReadVariableOp FLOAT32 [32]None<br></span>[76, 24, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>77 model/conv2d_16/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_16/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[77]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>42</td><td><span class='tooltip'><span class='tooltipcontent'>77 model/conv2d_16/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_16/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[77]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>78 model/leaky_re_lu_16/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[78]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>43</td><td><span class='tooltip'><span class='tooltipcontent'>44 model/leaky_re_lu_3/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br>78 model/leaky_re_lu_16/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[44, 78]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>79 model/concatenate_2/concat FLOAT32 [1, 64, 64, 64][-1, 64, 64, 64]<br></span>[79]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (4)</td>
+</tr>
+<tr>
+<td>44</td><td><span class='tooltip'><span class='tooltipcontent'>79 model/concatenate_2/concat FLOAT32 [1, 64, 64, 64][-1, 64, 64, 64]<br>25 model/conv2d_17/Conv2D FLOAT32 [32, 3, 3, 64]None<br>2 model/conv2d_16/BiasAdd/ReadVariableOp FLOAT32 [32]None<br></span>[79, 25, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>80 model/conv2d_17/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_17/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[80]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>45</td><td><span class='tooltip'><span class='tooltipcontent'>80 model/conv2d_17/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_17/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[80]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>81 model/leaky_re_lu_17/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[81]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>46</td><td><span class='tooltip'><span class='tooltipcontent'>81 model/leaky_re_lu_17/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br>26 model/conv2d_18/Conv2D FLOAT32 [32, 3, 3, 32]None<br>2 model/conv2d_16/BiasAdd/ReadVariableOp FLOAT32 [32]None<br></span>[81, 26, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>82 model/conv2d_18/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_18/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[82]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>47</td><td><span class='tooltip'><span class='tooltipcontent'>82 model/conv2d_18/BiasAdd;model/conv2d_16/BiasAdd/ReadVariableOp;model/conv2d_18/Conv2D FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[82]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>83 model/leaky_re_lu_18/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br></span>[83]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>48</td><td><span class='tooltip'><span class='tooltipcontent'>83 model/leaky_re_lu_18/LeakyRelu FLOAT32 [1, 64, 64, 32][-1, 64, 64, 32]<br>32 model/up_sampling2d_3/mul INT32 [2]None<br></span>[83, 32]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>84 model/up_sampling2d_3/resize/ResizeNearestNeighbor FLOAT32 [1, 128, 128, 32][-1, 128, 128, 32]<br></span>[84]</span></td>
+<td>{'align_corners': False, 'half_pixel_centers': True}</td>
+<td>RESIZE_NEAREST_NEIGHBOR (3)</td>
+</tr>
+<tr>
+<td>49</td><td><span class='tooltip'><span class='tooltipcontent'>84 model/up_sampling2d_3/resize/ResizeNearestNeighbor FLOAT32 [1, 128, 128, 32][-1, 128, 128, 32]<br>27 model/conv2d_19/Conv2D FLOAT32 [16, 2, 2, 32]None<br>1 model/conv2d_19/BiasAdd/ReadVariableOp FLOAT32 [16]None<br></span>[84, 27, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>85 model/conv2d_19/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_19/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[85]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>50</td><td><span class='tooltip'><span class='tooltipcontent'>85 model/conv2d_19/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_19/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[85]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>86 model/leaky_re_lu_19/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[86]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>51</td><td><span class='tooltip'><span class='tooltipcontent'>39 model/leaky_re_lu_1/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br>86 model/leaky_re_lu_19/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[39, 86]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>87 model/concatenate_3/concat FLOAT32 [1, 128, 128, 32][-1, 128, 128, 32]<br></span>[87]</span></td>
+<td>{'axis': 3, 'fused_activation_function': 0}</td>
+<td>CONCATENATION (4)</td>
+</tr>
+<tr>
+<td>52</td><td><span class='tooltip'><span class='tooltipcontent'>87 model/concatenate_3/concat FLOAT32 [1, 128, 128, 32][-1, 128, 128, 32]<br>28 model/conv2d_20/Conv2D FLOAT32 [16, 3, 3, 32]None<br>1 model/conv2d_19/BiasAdd/ReadVariableOp FLOAT32 [16]None<br></span>[87, 28, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>88 model/conv2d_20/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_20/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[88]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>53</td><td><span class='tooltip'><span class='tooltipcontent'>88 model/conv2d_20/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_20/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[88]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>89 model/leaky_re_lu_20/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[89]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>54</td><td><span class='tooltip'><span class='tooltipcontent'>89 model/leaky_re_lu_20/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br>29 model/conv2d_21/Conv2D FLOAT32 [16, 3, 3, 16]None<br>1 model/conv2d_19/BiasAdd/ReadVariableOp FLOAT32 [16]None<br></span>[89, 29, 1]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>90 model/conv2d_21/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_21/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[90]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>55</td><td><span class='tooltip'><span class='tooltipcontent'>90 model/conv2d_21/BiasAdd;model/conv2d_19/BiasAdd/ReadVariableOp;model/conv2d_21/Conv2D FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[90]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>91 model/leaky_re_lu_21/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br></span>[91]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>56</td><td><span class='tooltip'><span class='tooltipcontent'>91 model/leaky_re_lu_21/LeakyRelu FLOAT32 [1, 128, 128, 16][-1, 128, 128, 16]<br>30 model/conv2d_22/Conv2D FLOAT32 [2, 3, 3, 16]None<br>6 model/conv2d_22/BiasAdd/ReadVariableOp FLOAT32 [2]None<br></span>[91, 30, 6]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>92 model/conv2d_22/BiasAdd;model/conv2d_22/BiasAdd/ReadVariableOp;model/conv2d_22/Conv2D FLOAT32 [1, 128, 128, 2][-1, 128, 128, 2]<br></span>[92]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 0, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>57</td><td><span class='tooltip'><span class='tooltipcontent'>92 model/conv2d_22/BiasAdd;model/conv2d_22/BiasAdd/ReadVariableOp;model/conv2d_22/Conv2D FLOAT32 [1, 128, 128, 2][-1, 128, 128, 2]<br></span>[92]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>93 model/leaky_re_lu_22/LeakyRelu FLOAT32 [1, 128, 128, 2][-1, 128, 128, 2]<br></span>[93]</span></td>
+<td>{'alpha': 0.30000001192092896}</td>
+<td>LEAKY_RELU (1)</td>
+</tr>
+<tr>
+<td>58</td><td><span class='tooltip'><span class='tooltipcontent'>93 model/leaky_re_lu_22/LeakyRelu FLOAT32 [1, 128, 128, 2][-1, 128, 128, 2]<br>31 model/conv2d_23/Conv2D FLOAT32 [1, 1, 1, 2]None<br>7 model/conv2d_23/BiasAdd/ReadVariableOp FLOAT32 [1]None<br></span>[93, 31, 7]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>94 model/conv2d_23/BiasAdd;model/conv2d_23/BiasAdd/ReadVariableOp;model/conv2d_23/Conv2D FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br></span>[94]</span></td>
+<td>{'dilation_h_factor': 1, 'dilation_w_factor': 1, 'fused_activation_function': 0, 'padding': 1, 'stride_h': 1, 'stride_w': 1}</td>
+<td>CONV_2D (0)</td>
+</tr>
+<tr>
+<td>59</td><td><span class='tooltip'><span class='tooltipcontent'>94 model/conv2d_23/BiasAdd;model/conv2d_23/BiasAdd/ReadVariableOp;model/conv2d_23/Conv2D FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br></span>[94]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>95 StatefulPartitionedCall:0 FLOAT32 [1, 128, 128, 1][-1, 128, 128, 1]<br></span>[95]</span></td>
+<td>None</td>
+<td>TANH (5)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "MAX_POOL_2D (2)", "group": 2, "x": 200, "y": 1000}, {"id": "o5", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1200}, {"id": "o6", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 1400}, {"id": "o7", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 1600}, {"id": "o8", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 1800}, {"id": "o9", "name": "MAX_POOL_2D (2)", "group": 2, "x": 200, "y": 2000}, {"id": "o10", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2200}, {"id": "o11", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 2400}, {"id": "o12", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 2600}, {"id": "o13", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 2800}, {"id": "o14", "name": "MAX_POOL_2D (2)", "group": 2, "x": 200, "y": 3000}, {"id": "o15", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3200}, {"id": "o16", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 3400}, {"id": "o17", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 3600}, {"id": "o18", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 3800}, {"id": "o19", "name": "MAX_POOL_2D (2)", "group": 2, "x": 200, "y": 4000}, {"id": "o20", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4200}, {"id": "o21", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 4400}, {"id": "o22", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 4600}, {"id": "o23", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 4800}, {"id": "o24", "name": "RESIZE_NEAREST_NEIGHBOR (3)", "group": 2, "x": 200, "y": 5000}, {"id": "o25", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5200}, {"id": "o26", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 5400}, {"id": "o27", "name": "CONCATENATION (4)", "group": 2, "x": 200, "y": 5600}, {"id": "o28", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 5800}, {"id": "o29", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 6000}, {"id": "o30", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6200}, {"id": "o31", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 6400}, {"id": "o32", "name": "RESIZE_NEAREST_NEIGHBOR (3)", "group": 2, "x": 200, "y": 6600}, {"id": "o33", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 6800}, {"id": "o34", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 7000}, {"id": "o35", "name": "CONCATENATION (4)", "group": 2, "x": 200, "y": 7200}, {"id": "o36", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7400}, {"id": "o37", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 7600}, {"id": "o38", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 7800}, {"id": "o39", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 8000}, {"id": "o40", "name": "RESIZE_NEAREST_NEIGHBOR (3)", "group": 2, "x": 200, "y": 8200}, {"id": "o41", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 8400}, {"id": "o42", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 8600}, {"id": "o43", "name": "CONCATENATION (4)", "group": 2, "x": 200, "y": 8800}, {"id": "o44", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9000}, {"id": "o45", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 9200}, {"id": "o46", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 9400}, {"id": "o47", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 9600}, {"id": "o48", "name": "RESIZE_NEAREST_NEIGHBOR (3)", "group": 2, "x": 200, "y": 9800}, {"id": "o49", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10000}, {"id": "o50", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 10200}, {"id": "o51", "name": "CONCATENATION (4)", "group": 2, "x": 200, "y": 10400}, {"id": "o52", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 10600}, {"id": "o53", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 10800}, {"id": "o54", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11000}, {"id": "o55", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 11200}, {"id": "o56", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11400}, {"id": "o57", "name": "LEAKY_RELU (1)", "group": 2, "x": 200, "y": 11600}, {"id": "o58", "name": "CONV_2D (0)", "group": 2, "x": 200, "y": 11800}, {"id": "o59", "name": "TANH (5)", "group": 2, "x": 200, "y": 12000}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 510, "y": 100.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 1100.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 510, "y": 2100.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 510, "y": 3100.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 510, "y": 4100.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 510, "y": 11300.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 510, "y": 11700.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 340, "y": 100.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 340, "y": 500.0}, {"id": "t10", "name": "[] (10)", "group": 1, "x": 340, "y": 1100.0}, {"id": "t11", "name": "[] (11)", "group": 1, "x": 340, "y": 1500.0}, {"id": "t12", "name": "[] (12)", "group": 1, "x": 340, "y": 2100.0}, {"id": "t13", "name": "[] (13)", "group": 1, "x": 340, "y": 2500.0}, {"id": "t14", "name": "[] (14)", "group": 1, "x": 340, "y": 3100.0}, {"id": "t15", "name": "[] (15)", "group": 1, "x": 340, "y": 3500.0}, {"id": "t16", "name": "[] (16)", "group": 1, "x": 340, "y": 4100.0}, {"id": "t17", "name": "[] (17)", "group": 1, "x": 340, "y": 4500.0}, {"id": "t18", "name": "[] (18)", "group": 1, "x": 340, "y": 5100.0}, {"id": "t19", "name": "[] (19)", "group": 1, "x": 340, "y": 5700.0}, {"id": "t20", "name": "[] (20)", "group": 1, "x": 340, "y": 6100.0}, {"id": "t21", "name": "[] (21)", "group": 1, "x": 340, "y": 6700.0}, {"id": "t22", "name": "[] (22)", "group": 1, "x": 340, "y": 7300.0}, {"id": "t23", "name": "[] (23)", "group": 1, "x": 340, "y": 7700.0}, {"id": "t24", "name": "[] (24)", "group": 1, "x": 340, "y": 8300.0}, {"id": "t25", "name": "[] (25)", "group": 1, "x": 340, "y": 8900.0}, {"id": "t26", "name": "[] (26)", "group": 1, "x": 340, "y": 9300.0}, {"id": "t27", "name": "[] (27)", "group": 1, "x": 340, "y": 9900.0}, {"id": "t28", "name": "[] (28)", "group": 1, "x": 340, "y": 10500.0}, {"id": "t29", "name": "[] (29)", "group": 1, "x": 340, "y": 10900.0}, {"id": "t30", "name": "[] (30)", "group": 1, "x": 340, "y": 11300.0}, {"id": "t31", "name": "[] (31)", "group": 1, "x": 340, "y": 11700.0}, {"id": "t32", "name": "[] (32)", "group": 1, "x": 340, "y": 9700.0}, {"id": "t33", "name": "[] (33)", "group": 1, "x": 340, "y": 8100.0}, {"id": "t34", "name": "[] (34)", "group": 1, "x": 340, "y": 6500.0}, {"id": "t35", "name": "[] (35)", "group": 1, "x": 340, "y": 4900.0}, {"id": "t36", "name": "[] (36)", "group": 1, "x": 170, "y": 300.0}, {"id": "t37", "name": "[] (37)", "group": 1, "x": 170, "y": 500.0}, {"id": "t38", "name": "[] (38)", "group": 1, "x": 170, "y": 700.0}, {"id": "t39", "name": "[] (39)", "group": 1, "x": 170, "y": 900.0}, {"id": "t40", "name": "[] (40)", "group": 1, "x": 170, "y": 1100.0}, {"id": "t41", "name": "[] (41)", "group": 1, "x": 170, "y": 1300.0}, {"id": "t42", "name": "[] (42)", "group": 1, "x": 170, "y": 1500.0}, {"id": "t43", "name": "[] (43)", "group": 1, "x": 170, "y": 1700.0}, {"id": "t44", "name": "[] (44)", "group": 1, "x": 170, "y": 1900.0}, {"id": "t45", "name": "[] (45)", "group": 1, "x": 170, "y": 2100.0}, {"id": "t46", "name": "[] (46)", "group": 1, "x": 170, "y": 2300.0}, {"id": "t47", "name": "[] (47)", "group": 1, "x": 170, "y": 2500.0}, {"id": "t48", "name": "[] (48)", "group": 1, "x": 170, "y": 2700.0}, {"id": "t49", "name": "[] (49)", "group": 1, "x": 170, "y": 2900.0}, {"id": "t50", "name": "[] (50)", "group": 1, "x": 170, "y": 3100.0}, {"id": "t51", "name": "[] (51)", "group": 1, "x": 170, "y": 3300.0}, {"id": "t52", "name": "[] (52)", "group": 1, "x": 170, "y": 3500.0}, {"id": "t53", "name": "[] (53)", "group": 1, "x": 170, "y": 3700.0}, {"id": "t54", "name": "[] (54)", "group": 1, "x": 170, "y": 3900.0}, {"id": "t55", "name": "[] (55)", "group": 1, "x": 170, "y": 4100.0}, {"id": "t56", "name": "[] (56)", "group": 1, "x": 170, "y": 4300.0}, {"id": "t57", "name": "[] (57)", "group": 1, "x": 170, "y": 4500.0}, {"id": "t58", "name": "[] (58)", "group": 1, "x": 170, "y": 4700.0}, {"id": "t59", "name": "[] (59)", "group": 1, "x": 170, "y": 4900.0}, {"id": "t60", "name": "[] (60)", "group": 1, "x": 170, "y": 5100.0}, {"id": "t61", "name": "[] (61)", "group": 1, "x": 170, "y": 5300.0}, {"id": "t62", "name": "[] (62)", "group": 1, "x": 340, "y": 5500.0}, {"id": "t63", "name": "[] (63)", "group": 1, "x": 170, "y": 5700.0}, {"id": "t64", "name": "[] (64)", "group": 1, "x": 170, "y": 5900.0}, {"id": "t65", "name": "[] (65)", "group": 1, "x": 170, "y": 6100.0}, {"id": "t66", "name": "[] (66)", "group": 1, "x": 170, "y": 6300.0}, {"id": "t67", "name": "[] (67)", "group": 1, "x": 170, "y": 6500.0}, {"id": "t68", "name": "[] (68)", "group": 1, "x": 170, "y": 6700.0}, {"id": "t69", "name": "[] (69)", "group": 1, "x": 170, "y": 6900.0}, {"id": "t70", "name": "[] (70)", "group": 1, "x": 340, "y": 7100.0}, {"id": "t71", "name": "[] (71)", "group": 1, "x": 170, "y": 7300.0}, {"id": "t72", "name": "[] (72)", "group": 1, "x": 170, "y": 7500.0}, {"id": "t73", "name": "[] (73)", "group": 1, "x": 170, "y": 7700.0}, {"id": "t74", "name": "[] (74)", "group": 1, "x": 170, "y": 7900.0}, {"id": "t75", "name": "[] (75)", "group": 1, "x": 170, "y": 8100.0}, {"id": "t76", "name": "[] (76)", "group": 1, "x": 170, "y": 8300.0}, {"id": "t77", "name": "[] (77)", "group": 1, "x": 170, "y": 8500.0}, {"id": "t78", "name": "[] (78)", "group": 1, "x": 340, "y": 8700.0}, {"id": "t79", "name": "[] (79)", "group": 1, "x": 170, "y": 8900.0}, {"id": "t80", "name": "[] (80)", "group": 1, "x": 170, "y": 9100.0}, {"id": "t81", "name": "[] (81)", "group": 1, "x": 170, "y": 9300.0}, {"id": "t82", "name": "[] (82)", "group": 1, "x": 170, "y": 9500.0}, {"id": "t83", "name": "[] (83)", "group": 1, "x": 170, "y": 9700.0}, {"id": "t84", "name": "[] (84)", "group": 1, "x": 170, "y": 9900.0}, {"id": "t85", "name": "[] (85)", "group": 1, "x": 170, "y": 10100.0}, {"id": "t86", "name": "[] (86)", "group": 1, "x": 340, "y": 10300.0}, {"id": "t87", "name": "[] (87)", "group": 1, "x": 170, "y": 10500.0}, {"id": "t88", "name": "[] (88)", "group": 1, "x": 170, "y": 10700.0}, {"id": "t89", "name": "[] (89)", "group": 1, "x": 170, "y": 10900.0}, {"id": "t90", "name": "[] (90)", "group": 1, "x": 170, "y": 11100.0}, {"id": "t91", "name": "[] (91)", "group": 1, "x": 170, "y": 11300.0}, {"id": "t92", "name": "[] (92)", "group": 1, "x": 170, "y": 11500.0}, {"id": "t93", "name": "[] (93)", "group": 1, "x": 170, "y": 11700.0}, {"id": "t94", "name": "[] (94)", "group": 1, "x": 170, "y": 11900.0}, {"id": "t95", "name": "[] (95)", "group": 1, "x": 170, "y": 12100.0}], "edges": [{"source": "t0", "target": "o0"}, {"source": "t8", "target": "o0"}, {"source": "t1", "target": "o0"}, {"target": "t36", "source": "o0"}, {"source": "t36", "target": "o1"}, {"target": "t37", "source": "o1"}, {"source": "t37", "target": "o2"}, {"source": "t9", "target": "o2"}, {"source": "t1", "target": "o2"}, {"target": "t38", "source": "o2"}, {"source": "t38", "target": "o3"}, {"target": "t39", "source": "o3"}, {"source": "t39", "target": "o4"}, {"target": "t40", "source": "o4"}, {"source": "t40", "target": "o5"}, {"source": "t10", "target": "o5"}, {"source": "t2", "target": "o5"}, {"target": "t41", "source": "o5"}, {"source": "t41", "target": "o6"}, {"target": "t42", "source": "o6"}, {"source": "t42", "target": "o7"}, {"source": "t11", "target": "o7"}, {"source": "t2", "target": "o7"}, {"target": "t43", "source": "o7"}, {"source": "t43", "target": "o8"}, {"target": "t44", "source": "o8"}, {"source": "t44", "target": "o9"}, {"target": "t45", "source": "o9"}, {"source": "t45", "target": "o10"}, {"source": "t12", "target": "o10"}, {"source": "t3", "target": "o10"}, {"target": "t46", "source": "o10"}, {"source": "t46", "target": "o11"}, {"target": "t47", "source": "o11"}, {"source": "t47", "target": "o12"}, {"source": "t13", "target": "o12"}, {"source": "t3", "target": "o12"}, {"target": "t48", "source": "o12"}, {"source": "t48", "target": "o13"}, {"target": "t49", "source": "o13"}, {"source": "t49", "target": "o14"}, {"target": "t50", "source": "o14"}, {"source": "t50", "target": "o15"}, {"source": "t14", "target": "o15"}, {"source": "t4", "target": "o15"}, {"target": "t51", "source": "o15"}, {"source": "t51", "target": "o16"}, {"target": "t52", "source": "o16"}, {"source": "t52", "target": "o17"}, {"source": "t15", "target": "o17"}, {"source": "t4", "target": "o17"}, {"target": "t53", "source": "o17"}, {"source": "t53", "target": "o18"}, {"target": "t54", "source": "o18"}, {"source": "t54", "target": "o19"}, {"target": "t55", "source": "o19"}, {"source": "t55", "target": "o20"}, {"source": "t16", "target": "o20"}, {"source": "t5", "target": "o20"}, {"target": "t56", "source": "o20"}, {"source": "t56", "target": "o21"}, {"target": "t57", "source": "o21"}, {"source": "t57", "target": "o22"}, {"source": "t17", "target": "o22"}, {"source": "t5", "target": "o22"}, {"target": "t58", "source": "o22"}, {"source": "t58", "target": "o23"}, {"target": "t59", "source": "o23"}, {"source": "t59", "target": "o24"}, {"source": "t35", "target": "o24"}, {"target": "t60", "source": "o24"}, {"source": "t60", "target": "o25"}, {"source": "t18", "target": "o25"}, {"source": "t4", "target": "o25"}, {"target": "t61", "source": "o25"}, {"source": "t61", "target": "o26"}, {"target": "t62", "source": "o26"}, {"source": "t54", "target": "o27"}, {"source": "t62", "target": "o27"}, {"target": "t63", "source": "o27"}, {"source": "t63", "target": "o28"}, {"source": "t19", "target": "o28"}, {"source": "t4", "target": "o28"}, {"target": "t64", "source": "o28"}, {"source": "t64", "target": "o29"}, {"target": "t65", "source": "o29"}, {"source": "t65", "target": "o30"}, {"source": "t20", "target": "o30"}, {"source": "t4", "target": "o30"}, {"target": "t66", "source": "o30"}, {"source": "t66", "target": "o31"}, {"target": "t67", "source": "o31"}, {"source": "t67", "target": "o32"}, {"source": "t34", "target": "o32"}, {"target": "t68", "source": "o32"}, {"source": "t68", "target": "o33"}, {"source": "t21", "target": "o33"}, {"source": "t3", "target": "o33"}, {"target": "t69", "source": "o33"}, {"source": "t69", "target": "o34"}, {"target": "t70", "source": "o34"}, {"source": "t49", "target": "o35"}, {"source": "t70", "target": "o35"}, {"target": "t71", "source": "o35"}, {"source": "t71", "target": "o36"}, {"source": "t22", "target": "o36"}, {"source": "t3", "target": "o36"}, {"target": "t72", "source": "o36"}, {"source": "t72", "target": "o37"}, {"target": "t73", "source": "o37"}, {"source": "t73", "target": "o38"}, {"source": "t23", "target": "o38"}, {"source": "t3", "target": "o38"}, {"target": "t74", "source": "o38"}, {"source": "t74", "target": "o39"}, {"target": "t75", "source": "o39"}, {"source": "t75", "target": "o40"}, {"source": "t33", "target": "o40"}, {"target": "t76", "source": "o40"}, {"source": "t76", "target": "o41"}, {"source": "t24", "target": "o41"}, {"source": "t2", "target": "o41"}, {"target": "t77", "source": "o41"}, {"source": "t77", "target": "o42"}, {"target": "t78", "source": "o42"}, {"source": "t44", "target": "o43"}, {"source": "t78", "target": "o43"}, {"target": "t79", "source": "o43"}, {"source": "t79", "target": "o44"}, {"source": "t25", "target": "o44"}, {"source": "t2", "target": "o44"}, {"target": "t80", "source": "o44"}, {"source": "t80", "target": "o45"}, {"target": "t81", "source": "o45"}, {"source": "t81", "target": "o46"}, {"source": "t26", "target": "o46"}, {"source": "t2", "target": "o46"}, {"target": "t82", "source": "o46"}, {"source": "t82", "target": "o47"}, {"target": "t83", "source": "o47"}, {"source": "t83", "target": "o48"}, {"source": "t32", "target": "o48"}, {"target": "t84", "source": "o48"}, {"source": "t84", "target": "o49"}, {"source": "t27", "target": "o49"}, {"source": "t1", "target": "o49"}, {"target": "t85", "source": "o49"}, {"source": "t85", "target": "o50"}, {"target": "t86", "source": "o50"}, {"source": "t39", "target": "o51"}, {"source": "t86", "target": "o51"}, {"target": "t87", "source": "o51"}, {"source": "t87", "target": "o52"}, {"source": "t28", "target": "o52"}, {"source": "t1", "target": "o52"}, {"target": "t88", "source": "o52"}, {"source": "t88", "target": "o53"}, {"target": "t89", "source": "o53"}, {"source": "t89", "target": "o54"}, {"source": "t29", "target": "o54"}, {"source": "t1", "target": "o54"}, {"target": "t90", "source": "o54"}, {"source": "t90", "target": "o55"}, {"target": "t91", "source": "o55"}, {"source": "t91", "target": "o56"}, {"source": "t30", "target": "o56"}, {"source": "t6", "target": "o56"}, {"target": "t92", "source": "o56"}, {"source": "t92", "target": "o57"}, {"target": "t93", "source": "o57"}, {"source": "t93", "target": "o58"}, {"source": "t31", "target": "o58"}, {"source": "t7", "target": "o58"}, {"target": "t94", "source": "o58"}, {"source": "t94", "target": "o59"}, {"target": "t95", "source": "o59"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>--</td>
+</tr>
+<tr>
+<td>2</td><td>64 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>128 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>256 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>512 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>1024 bytes</td>
+</tr>
+<tr>
+<td>7</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>8</td><td>4 bytes</td>
+</tr>
+<tr>
+<td>9</td><td>576 bytes</td>
+</tr>
+<tr>
+<td>10</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>11</td><td>18432 bytes</td>
+</tr>
+<tr>
+<td>12</td><td>36864 bytes</td>
+</tr>
+<tr>
+<td>13</td><td>73728 bytes</td>
+</tr>
+<tr>
+<td>14</td><td>147456 bytes</td>
+</tr>
+<tr>
+<td>15</td><td>294912 bytes</td>
+</tr>
+<tr>
+<td>16</td><td>589824 bytes</td>
+</tr>
+<tr>
+<td>17</td><td>1179648 bytes</td>
+</tr>
+<tr>
+<td>18</td><td>2359296 bytes</td>
+</tr>
+<tr>
+<td>19</td><td>524288 bytes</td>
+</tr>
+<tr>
+<td>20</td><td>1179648 bytes</td>
+</tr>
+<tr>
+<td>21</td><td>589824 bytes</td>
+</tr>
+<tr>
+<td>22</td><td>131072 bytes</td>
+</tr>
+<tr>
+<td>23</td><td>294912 bytes</td>
+</tr>
+<tr>
+<td>24</td><td>147456 bytes</td>
+</tr>
+<tr>
+<td>25</td><td>32768 bytes</td>
+</tr>
+<tr>
+<td>26</td><td>73728 bytes</td>
+</tr>
+<tr>
+<td>27</td><td>36864 bytes</td>
+</tr>
+<tr>
+<td>28</td><td>8192 bytes</td>
+</tr>
+<tr>
+<td>29</td><td>18432 bytes</td>
+</tr>
+<tr>
+<td>30</td><td>9216 bytes</td>
+</tr>
+<tr>
+<td>31</td><td>1152 bytes</td>
+</tr>
+<tr>
+<td>32</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>33</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>34</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>35</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>36</td><td>8 bytes</td>
+</tr>
+<tr>
+<td>37</td><td>--</td>
+</tr>
+<tr>
+<td>38</td><td>--</td>
+</tr>
+<tr>
+<td>39</td><td>--</td>
+</tr>
+<tr>
+<td>40</td><td>--</td>
+</tr>
+<tr>
+<td>41</td><td>--</td>
+</tr>
+<tr>
+<td>42</td><td>--</td>
+</tr>
+<tr>
+<td>43</td><td>--</td>
+</tr>
+<tr>
+<td>44</td><td>--</td>
+</tr>
+<tr>
+<td>45</td><td>--</td>
+</tr>
+<tr>
+<td>46</td><td>--</td>
+</tr>
+<tr>
+<td>47</td><td>--</td>
+</tr>
+<tr>
+<td>48</td><td>--</td>
+</tr>
+<tr>
+<td>49</td><td>--</td>
+</tr>
+<tr>
+<td>50</td><td>--</td>
+</tr>
+<tr>
+<td>51</td><td>--</td>
+</tr>
+<tr>
+<td>52</td><td>--</td>
+</tr>
+<tr>
+<td>53</td><td>--</td>
+</tr>
+<tr>
+<td>54</td><td>--</td>
+</tr>
+<tr>
+<td>55</td><td>--</td>
+</tr>
+<tr>
+<td>56</td><td>--</td>
+</tr>
+<tr>
+<td>57</td><td>--</td>
+</tr>
+<tr>
+<td>58</td><td>--</td>
+</tr>
+<tr>
+<td>59</td><td>--</td>
+</tr>
+<tr>
+<td>60</td><td>--</td>
+</tr>
+<tr>
+<td>61</td><td>--</td>
+</tr>
+<tr>
+<td>62</td><td>--</td>
+</tr>
+<tr>
+<td>63</td><td>--</td>
+</tr>
+<tr>
+<td>64</td><td>--</td>
+</tr>
+<tr>
+<td>65</td><td>--</td>
+</tr>
+<tr>
+<td>66</td><td>--</td>
+</tr>
+<tr>
+<td>67</td><td>--</td>
+</tr>
+<tr>
+<td>68</td><td>--</td>
+</tr>
+<tr>
+<td>69</td><td>--</td>
+</tr>
+<tr>
+<td>70</td><td>--</td>
+</tr>
+<tr>
+<td>71</td><td>--</td>
+</tr>
+<tr>
+<td>72</td><td>--</td>
+</tr>
+<tr>
+<td>73</td><td>--</td>
+</tr>
+<tr>
+<td>74</td><td>--</td>
+</tr>
+<tr>
+<td>75</td><td>--</td>
+</tr>
+<tr>
+<td>76</td><td>--</td>
+</tr>
+<tr>
+<td>77</td><td>--</td>
+</tr>
+<tr>
+<td>78</td><td>--</td>
+</tr>
+<tr>
+<td>79</td><td>--</td>
+</tr>
+<tr>
+<td>80</td><td>--</td>
+</tr>
+<tr>
+<td>81</td><td>--</td>
+</tr>
+<tr>
+<td>82</td><td>--</td>
+</tr>
+<tr>
+<td>83</td><td>--</td>
+</tr>
+<tr>
+<td>84</td><td>--</td>
+</tr>
+<tr>
+<td>85</td><td>--</td>
+</tr>
+<tr>
+<td>86</td><td>--</td>
+</tr>
+<tr>
+<td>87</td><td>--</td>
+</tr>
+<tr>
+<td>88</td><td>--</td>
+</tr>
+<tr>
+<td>89</td><td>--</td>
+</tr>
+<tr>
+<td>90</td><td>--</td>
+</tr>
+<tr>
+<td>91</td><td>--</td>
+</tr>
+<tr>
+<td>92</td><td>--</td>
+</tr>
+<tr>
+<td>93</td><td>--</td>
+</tr>
+<tr>
+<td>94</td><td>--</td>
+</tr>
+<tr>
+<td>95</td><td>--</td>
+</tr>
+<tr>
+<td>96</td><td>--</td>
+</tr>
+<tr>
+<td>97</td><td>16 bytes</td>
+</tr>
+<tr>
+<td>98</td><td>84 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>CONV_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>LEAKY_RELU</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td><td>MAX_POOL_2D</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td><td>RESIZE_NEAREST_NEIGHBOR</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td><td>CONCATENATION</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td><td>TANH</td>
+<td></td>
+<td>1</td>
+</tr>
+</table>
+</body></html>

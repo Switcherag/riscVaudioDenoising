@@ -381,6 +381,7 @@ void region_layer_run(region_layer_t *rl, obj_info_t *obj_info)
 }
 
 void region_layer_draw_boxes(region_layer_t *rl, callback_draw_box callback)
+
 {
     uint32_t image_width = rl->image_width;
     uint32_t image_height = rl->image_height;

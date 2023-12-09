@@ -1,17 +1,11 @@
-
-
-
-
-
-
-
+#include <stdio.h>	
+#include "bsp.h"	
 
 
 
 int main(void){
 
     // Record MEMS MIC to buffer1
-
 
     // pre-processthe buffer1 data and store it in buffer2
 
